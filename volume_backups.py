@@ -2,7 +2,7 @@ import boto3
 import schedule
 
 ec2_client = boto3.client('ec2', region_name='us-east-2')
-ec2_resource = boto3.resource('ec2')
+
 
 def create_volume_snapshot():
     volumes = ec2_client.describe_volumes(
